@@ -1,4 +1,6 @@
 import http from 'http';
+const data = fs.readfileSync("index.html", "utf8");
+
 
 const server = http.createServer((req, res) => {
     console.log("Hello World");
@@ -13,7 +15,7 @@ const server = http.createServer((req, res) => {
         "custom-header" : "Hello ECE"
      });
 
-    res.statusCode = 200;
+    res.statusCode = 404;
     res.setHeader("Content-Type", "text/html");
     res.write("<h1>Order Details</h1>");
     res.write(`<p>Order ID: ${order.orderId}</p>`); 

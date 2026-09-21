@@ -1,9 +1,3 @@
-export const isVote = (age) => { 
-    if (age >= 18) {
-        return "Eligible to vote";
-    }
-    else {
-        return "Not eligible to vote";
-    }   
+export const pi = 3.14159;
 
-}
+import {calculate_area,calculate_perimeter} from './file.js';
